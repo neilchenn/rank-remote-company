@@ -5,3 +5,15 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+10.times do
+  user = User.new
+  user.name = Faker::Internet.user[:username]
+  user.save!
+end
+
+10.times do
+  company = Company.new
+  company.name = Faker::Company.name
+  company.save!
+end
